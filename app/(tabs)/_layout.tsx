@@ -28,15 +28,8 @@ export default function TabsLayout() {
           backgroundColor: "#fff",
           borderTopWidth: 0,
           elevation: 4,
-          paddingTop: 15,
-          position: "absolute",
-          marginLeft: 10,
-          marginRight: 10,
-          bottom: 30,
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
-          borderBottomRightRadius: 30,
-          borderBottomLeftRadius: 30,
+          paddingTop: 10,
+          paddingBottom: 10,
         },
       }}
     >
@@ -68,7 +61,7 @@ export default function TabsLayout() {
       />
 
       <Tabs.Screen
-        name="(profile)/index"
+        name="(profile)"
         options={{
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} label="Profile" icon="person" />

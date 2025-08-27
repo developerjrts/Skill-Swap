@@ -1,8 +1,7 @@
-import SearchBar from "@/components/SearchBar";
 import SkillCard from "@/components/SkillCard";
 import { skills } from "@/constant";
 import React, { useState } from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
@@ -28,7 +27,7 @@ const Home = () => {
         onRefresh={handleRefresh}
         ListHeaderComponent={
           <View className="px-5">
-            <SearchBar />
+            <Text>Filter</Text>
           </View>
         }
         contentContainerClassName="pb-28"

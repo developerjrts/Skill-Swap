@@ -7,7 +7,7 @@ const ScreensLayout = () => {
       <Stack.Screen
         name="skills/[skillId]"
         options={{
-          title: "Skill Information",
+          title: "Skill Details",
           headerTitleAlign: "center",
           headerShadowVisible: false,
         }}

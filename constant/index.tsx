@@ -3,7 +3,9 @@ import avatar from "@/assets/images/skills-constant/avatar.png";
 import graphic from "@/assets/images/skills-constant/graphic.png";
 import marketing from "@/assets/images/skills-constant/marketing.png";
 import photography from "@/assets/images/skills-constant/photography.png";
+import userProfile from "@/assets/images/skills-constant/user.png";
 import writting from "@/assets/images/skills-constant/writting.png";
+import Entypo from "@expo/vector-icons/Entypo";
 
 export const images = {
   AuthBG,
@@ -12,6 +14,7 @@ export const images = {
   writting,
   marketing,
   avatar,
+  userProfile,
 };
 
 export const skills = [
@@ -68,3 +71,39 @@ export const skills = [
     },
   },
 ];
+
+export const user = {
+  avatar: images.userProfile,
+  profession: "Full Stack Developer",
+  joined: "2025",
+  name: "Developer JRTS",
+  skillsWanted: [
+    {
+      title: "Photography",
+      icon: <Entypo name="camera" size={24} color="black" />,
+    },
+    {
+      title: "Music",
+      icon: <Entypo name="music" size={24} color="black" />,
+    },
+    {
+      title: "Art",
+      icon: <Entypo name="round-brush" size={24} color="black" />,
+    },
+  ],
+  rating: 4.5,
+  skillsOffered: [
+    {
+      title: "Coding",
+      icon: <Entypo name="code" size={24} color="black" />,
+    },
+    {
+      title: "Writting",
+      icon: <Entypo name="pencil" size={24} color="black" />,
+    },
+    {
+      title: "Public Speaking",
+      icon: <Entypo name="tv" size={24} color="black" />,
+    },
+  ],
+};
