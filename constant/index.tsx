@@ -6,6 +6,7 @@ import photography from "@/assets/images/skills-constant/photography.png";
 import userProfile from "@/assets/images/skills-constant/user.png";
 import writting from "@/assets/images/skills-constant/writting.png";
 import Entypo from "@expo/vector-icons/Entypo";
+import uploadProfile from "@/assets/images/upload-profile.png";
 
 export const images = {
   AuthBG,
@@ -15,6 +16,7 @@ export const images = {
   marketing,
   avatar,
   userProfile,
+  uploadProfile,
 };
 
 export const skills = [
