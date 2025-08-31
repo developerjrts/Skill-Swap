@@ -12,7 +12,7 @@ export default function SplashScreen() {
 
   const checkAuth = async () => {
     const token = await AsyncStorage.getItem("token");
-    if (!token) {
+    if (token) {
       router.replace("/(tabs)");
     } else {
       router.replace("/welcome");

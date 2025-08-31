@@ -1,9 +1,22 @@
+import Button from "@/components/Button";
+import { useAuth } from "@/context/AuthContext";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import { FlatList, Switch, Text, TouchableOpacity, View } from "react-native";
 
 const Settings = () => {
   const [isEnable, setIsEnable] = useState(false);
+
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem("token");
+      router.replace("/(auth)/sign-in");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const settings = [
     {
@@ -46,6 +59,11 @@ const Settings = () => {
               }}
             />
           </TouchableOpacity>
+        )}
+        ListFooterComponent={() => (
+          <View className="mt-10 px-4">
+            <Button onPress={handleLogout}>Log out</Button>
+          </View>
         )}
       />
     </View>

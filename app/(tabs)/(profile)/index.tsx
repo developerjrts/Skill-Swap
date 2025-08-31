@@ -2,14 +2,21 @@ import ProfileCard from "@/components/ProfileCard";
 import SkillsOffered from "@/components/SkillsOffered";
 import SkillsWanted from "@/components/SkillsWanted";
 import Stats from "@/components/Stats";
+import { useAuth } from "@/context/AuthContext";
 import { Feather, Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
-import React from "react";
+import React, { useEffect } from "react";
 import { FlatList, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Profile = () => {
   const data: any[] = [];
+
+  const { user } = useAuth();
+
+  useEffect(() => {
+    console.log(user);
+  }, []);
 
   return (
     <SafeAreaView className="flex-1 bg-white">

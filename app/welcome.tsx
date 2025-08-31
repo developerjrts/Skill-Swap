@@ -26,13 +26,6 @@ export default function Welcome() {
         >
           Sign Up
         </Button>
-        <Button
-          type="secondary"
-          className="mt-5"
-          onPress={() => router.push("/profile-setup")}
-        >
-          Profile Setup
-        </Button>
       </View>
     </View>
   );

@@ -11,7 +11,7 @@ interface props {
 const TextField = ({ label, onChange, value, type = "default" }: props) => {
   return (
     <TextInput
-      className="bg-secondary p-4 py-6 font-bold text-[20px] lowercase min-w-[350px] rounded-md text-primary"
+      className="bg-secondary p-4 py-6 font-bold text-[20px] min-w-[350px] rounded-md text-primary"
       value={value}
       placeholder={label}
       onChangeText={onChange}

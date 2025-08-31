@@ -1,13 +1,14 @@
-import { user } from "@/constant";
 import React from "react";
 import { FlatList, Text, View } from "react-native";
 
 const SkillsOffered = () => {
+  const data: any[] = [];
+
   return (
     <View className="flex-col gap-2">
       <Text className="text-[18px] font-bold">Skills Offered</Text>
       <FlatList
-        data={user.skillsOffered}
+        data={data}
         numColumns={2}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
@@ -17,6 +18,14 @@ const SkillsOffered = () => {
           </View>
         )}
         contentContainerStyle={{ paddingVertical: 8 }}
+        ListEmptyComponent={() => (
+          <View className="flex items-center justify-center h-[100px]">
+            <Text className="font-medium text-2xl">
+              {" "}
+              There are no skills offered
+            </Text>
+          </View>
+        )}
       />
     </View>
   );

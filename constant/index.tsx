@@ -74,7 +74,7 @@ export const skills = [
   },
 ];
 
-export const user = {
+export const defaultUser = {
   avatar: images.userProfile,
   profession: "Full Stack Developer",
   joined: "2025",
