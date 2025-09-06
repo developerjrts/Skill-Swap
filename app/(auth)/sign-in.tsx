@@ -46,6 +46,7 @@ const SignIn = () => {
 
       if (response.status) {
         await AsyncStorage.setItem("token", response.token);
+        await AsyncStorage.setItem("user", JSON.stringify(response.user));
         router.replace("/(tabs)");
       }
     } catch (error) {

@@ -1,41 +1,41 @@
 import { router } from "expo-router";
 import React from "react";
-import {
-  Image,
-  ImageSourcePropType,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
-interface Item {
+interface Skill {
+  _id: string;
   title: string;
-  banner: ImageSourcePropType;
   description: string;
-  
+  category: string;
+  rating: number;
+  banner: {
+    url: string;
+    public_id: string;
+  };
 }
 
 interface props {
-  item: Item;
-  index: number
+  item: Skill;
 }
 
-const SkillCard = ({ item, index }: props) => {
+const SkillCard = ({ item }: props) => {
   return (
     <TouchableOpacity
-      onPress={() => router.push(`/(screens)/skills/${index}`)}
-      className="flex flex-row w-full bg-white max-h-[150px] px-6"
+      onPress={() => router.push(`/(screens)/skills/${item._id}`)}
+      className="flex flex-row w-full bg-white max-h-[150px] px-6 border-b border-b-[gray]i"
     >
       <View className="w-[65%] flex-col gap-2 justify-center py-8">
         <Text className="font-bold text-[18px] text-text2">{item.title}</Text>
         <Text className="font-normal text-[14px] text-text3">
-          {item.description}
+          {item.description.length > 65
+            ? item.description.slice(0, 65) + "..."
+            : item.description}
         </Text>
       </View>
 
       <Image
-        source={item.banner}
-        className="w-[35%] h-full"
+        source={{ uri: item.banner.url }}
+        className="w-[35%] h-full rounded-md"
         resizeMode="contain"
       />
     </TouchableOpacity>

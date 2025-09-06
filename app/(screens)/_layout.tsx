@@ -12,6 +12,14 @@ const ScreensLayout = () => {
           headerShadowVisible: false,
         }}
       />
+      <Stack.Screen
+        name="addskill"
+        options={{
+          title: "Add Skill",
+          headerTitleAlign: "center",
+          headerShadowVisible: false,
+        }}
+      />
     </Stack>
   );
 };
